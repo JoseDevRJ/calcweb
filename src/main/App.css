@@ -1,0 +1,30 @@
+.app{
+    background-color: #123456;
+    display: grid;
+    grid-template-columns: 200px 1fr ;
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-areas: 'logo header' 'nav main';
+    height: 100vh;
+}
+header.header{
+    grid-area:header;
+}
+aside.menu-area{
+    grid-area: nav;
+}
+main.main{
+    grid-area:main;
+}
+aside.logo{
+    grid-area: logo;
+}
+
+@media(max-width:768px){
+    .app{
+        height: 100vh;
+        grid-template-rows: 50px 50px 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'header' 'nav' 'main';
+    }
+       
+}
